@@ -1,0 +1,2617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Compassionate proctology and general clinic care. Book a consultation today." />
+  <title>Vitalis Care Clinic — Proctology & Family Health</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    /* ========== CSS Variables ========== */
+    :root {
+      --color-primary: #178a9c;
+      --color-primary-dark: #0f6b7a;
+      --color-primary-soft: #e4f4f7;
+      --color-accent: #a8dce6;
+      --color-mint: #f2fafb;
+      --color-cream: #fafcfd;
+      --color-white: #ffffff;
+      --color-text: #1e2a2f;
+      --color-text-muted: #5c6b72;
+      --color-border: #e2ecee;
+      --shadow-sm: 0 2px 10px rgba(15, 107, 122, 0.06);
+      --shadow-md: 0 10px 40px rgba(15, 107, 122, 0.1);
+      --shadow-lg: 0 20px 50px rgba(15, 107, 122, 0.12);
+      --shadow-card-hover: 0 16px 48px rgba(15, 107, 122, 0.14);
+      --radius: 14px;
+      --radius-lg: 22px;
+      --radius-xl: 28px;
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 1.5rem;
+      --space-lg: 2.5rem;
+      --space-xl: 4rem;
+      --space-2xl: 5.5rem;
+      --font: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      --header-h: 76px;
+      --container-max: 1140px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--color-text);
+      line-height: 1.65;
+      background: var(--color-white);
+      font-size: 1rem;
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ========== Layout ========== */
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 clamp(0.875rem, 4vw, 1.75rem);
+    }
+
+    .section {
+      padding: var(--space-2xl) 0;
+    }
+
+    .section--tint {
+      background: linear-gradient(180deg, #e4f2f5 0%, #f7fcfd 100%);
+    }
+
+    .section--soft {
+      background: linear-gradient(180deg, #eef8fa 0%, var(--color-mint) 100%);
+    }
+
+    .section-title {
+      font-size: clamp(1.85rem, 4.2vw, 2.4rem);
+      font-weight: 700;
+      color: var(--color-text);
+      text-align: center;
+      margin: 0 0 var(--space-sm);
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+    }
+
+    .section-lead {
+      text-align: center;
+      color: var(--color-text-muted);
+      max-width: 580px;
+      margin: 0 auto var(--space-lg);
+      font-size: 1.08rem;
+      line-height: 1.65;
+    }
+
+    .section-divider {
+      height: 1px;
+      max-width: 120px;
+      margin: 0 auto var(--space-lg);
+      background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+      border: none;
+    }
+
+    /* ========== Header / Nav ========== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(226, 236, 238, 0.9);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset, var(--shadow-sm);
+      transition: box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+    }
+
+    .site-header.is-scrolled {
+      box-shadow: 0 8px 32px rgba(15, 107, 122, 0.1);
+      border-bottom-color: rgba(226, 236, 238, 1);
+      background: rgba(255, 255, 255, 0.98);
+    }
+
+    .header-inner {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: var(--header-h);
+      gap: var(--space-md);
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--color-primary-dark);
+      letter-spacing: -0.035em;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      font-weight: 600;
+      color: var(--color-text-muted);
+      font-size: 0.78rem;
+      display: block;
+      margin-top: 3px;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-desktop {
+      display: flex;
+      align-items: center;
+      gap: 1.35rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-desktop a:not(.btn) {
+      color: var(--color-text);
+      font-weight: 500;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-desktop a:not(.btn):hover {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem 1.45rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+      text-decoration: none;
+      touch-action: manipulation;
+    }
+
+    .btn-primary {
+      background: linear-gradient(145deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      color: var(--color-white);
+      box-shadow: 0 4px 14px rgba(15, 107, 122, 0.28);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 10px 28px rgba(15, 107, 122, 0.35);
+      text-decoration: none;
+      color: var(--color-white);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.85);
+      color: var(--color-primary-dark);
+      border: 2px solid rgba(23, 138, 156, 0.35);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-outline:hover {
+      background: var(--color-primary-soft);
+      border-color: var(--color-primary);
+      transform: translateY(-2px) scale(1.03);
+      text-decoration: none;
+    }
+
+    .btn-light {
+      background: var(--color-white);
+      color: var(--color-primary-dark);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .btn-light:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: var(--shadow-md);
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: var(--space-xs);
+      border-radius: 8px;
+    }
+
+    .nav-toggle:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    .nav-toggle span {
+      width: 24px;
+      height: 2px;
+      background: var(--color-text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .nav-toggle[aria-expanded="true"] span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle[aria-expanded="true"] span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-toggle[aria-expanded="true"] span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .nav-mobile {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-border);
+      padding: var(--space-md);
+      flex-direction: column;
+      gap: var(--space-sm);
+      box-shadow: var(--shadow-md);
+      z-index: 1001;
+      max-height: min(75vh, calc(100dvh - var(--header-h)));
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-mobile.is-open {
+      display: flex;
+    }
+
+    .nav-mobile a {
+      color: var(--color-text);
+      font-weight: 500;
+      padding: 0.65rem 0;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-mobile .btn-primary {
+      text-align: center;
+      margin-top: var(--space-xs);
+      min-height: 48px;
+    }
+
+    @media (max-width: 1024px) {
+      .nav-desktop {
+        display: none;
+      }
+
+      .nav-toggle {
+        display: flex;
+        min-width: 44px;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    /* ========== Hero ========== */
+    .hero {
+      position: relative;
+      padding: calc(var(--space-xl) + 0.5rem) 0 var(--space-2xl);
+      overflow-x: hidden;
+      overflow-y: visible;
+      background: linear-gradient(165deg, #e8f5f8 0%, var(--color-white) 42%, #f0fafb 100%);
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .hero__blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.45;
+    }
+
+    .hero__blob--1 {
+      width: 420px;
+      height: 420px;
+      background: #7ec8d4;
+      top: -120px;
+      right: -80px;
+    }
+
+    .hero__blob--2 {
+      width: 300px;
+      height: 300px;
+      background: #b8e0e8;
+      bottom: 10%;
+      left: -100px;
+    }
+
+    .hero__grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: clamp(1.5rem, 4vw, 3rem);
+      align-items: center;
+      z-index: 1;
+    }
+
+    @media (max-width: 992px) {
+      .hero__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .hero__eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-primary-dark);
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid rgba(23, 138, 156, 0.2);
+      padding: 0.4rem 0.85rem;
+      border-radius: 999px;
+      margin-bottom: var(--space-md);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.15rem, 5.5vw, 3.05rem);
+      line-height: 1.12;
+      margin: 0 0 var(--space-md);
+      color: var(--color-text);
+      letter-spacing: -0.035em;
+      font-weight: 800;
+    }
+
+    .hero h1 .hero__accent {
+      background: linear-gradient(120deg, var(--color-primary-dark), var(--color-primary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p.lead {
+      font-size: 1.12rem;
+      color: var(--color-text-muted);
+      margin: 0 0 var(--space-lg);
+      max-width: 34rem;
+      line-height: 1.7;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-lg);
+    }
+
+    .hero-cta .btn-primary {
+      padding-left: 1.6rem;
+      padding-right: 1.6rem;
+    }
+
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: rgba(255, 255, 255, 0.92);
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--color-primary-dark);
+      border: 1px solid rgba(226, 236, 238, 0.95);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-float {
+      position: absolute;
+      z-index: 3;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.45rem 0.75rem;
+      border-radius: 10px;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-md);
+      color: var(--color-primary-dark);
+      white-space: nowrap;
+    }
+
+    .hero-float--1 {
+      top: 8%;
+      right: 4%;
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .hero-float--2 {
+      bottom: 28%;
+      left: 0;
+      animation: float 6s ease-in-out infinite 0.5s;
+    }
+
+    .hero-float--3 {
+      top: 42%;
+      right: -2%;
+      animation: float 5.5s ease-in-out infinite 1s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @media (max-width: 992px) {
+      .hero-float--3 {
+        right: 4%;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero-visual {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        min-height: 0;
+        padding-top: 0.5rem;
+      }
+
+      .hero-card {
+        order: 1;
+        max-width: none;
+        width: 100%;
+      }
+
+      .hero-float--1 {
+        order: 2;
+      }
+
+      .hero-float--2 {
+        order: 3;
+      }
+
+      .hero-float--3 {
+        order: 4;
+      }
+
+      .hero-float {
+        position: static;
+        align-self: flex-start;
+        margin: 0.35rem 0.5rem 0 0;
+        white-space: normal;
+        max-width: 100%;
+        animation: none !important;
+        box-shadow: var(--shadow-sm);
+        font-size: 0.65rem;
+        padding: 0.4rem 0.65rem;
+      }
+    }
+
+    .hero-card {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      background: linear-gradient(155deg, var(--color-white) 0%, #f5fbfc 100%);
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(226, 236, 238, 0.95);
+      box-shadow: var(--shadow-lg);
+      padding: var(--space-lg);
+      text-align: left;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .hero-card:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .hero-card__header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-md);
+      padding-bottom: var(--space-md);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .hero-card__avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 18px;
+      background: linear-gradient(145deg, var(--color-accent), var(--color-primary-soft));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      flex-shrink: 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-card__meta strong {
+      display: block;
+      font-size: 1.05rem;
+      color: var(--color-text);
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-card__meta span {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+    }
+
+    .hero-card ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hero-card li {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      padding: 0.35rem 0;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .hero-card li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.65rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-primary);
+    }
+
+    /* ========== Stats strip ========== */
+    .stats-strip {
+      position: relative;
+      z-index: 2;
+      margin-top: calc(-1 * var(--space-lg));
+      margin-bottom: 0;
+    }
+
+    .stats-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-md);
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-md);
+      padding: var(--space-lg) var(--space-md);
+    }
+
+    @media (max-width: 768px) {
+      .stats-inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: var(--space-sm);
+    }
+
+    .stat-item__num {
+      font-size: clamp(1.65rem, 3.5vw, 2.1rem);
+      font-weight: 800;
+      color: var(--color-primary-dark);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .stat-item__label {
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      margin-top: 0.35rem;
+      font-weight: 500;
+    }
+
+    /* ========== Cards: Why / generic ========== */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+      gap: var(--space-md);
+    }
+
+    .feature-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px) scale(1.01);
+      box-shadow: var(--shadow-card-hover);
+      border-color: rgba(23, 138, 156, 0.25);
+    }
+
+    .feature-card .icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: linear-gradient(145deg, var(--color-primary-soft), var(--color-white));
+      border: 1px solid rgba(23, 138, 156, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.45rem;
+      margin-bottom: var(--space-md);
+    }
+
+    .feature-card h3 {
+      margin: 0 0 var(--space-xs);
+      font-size: 1.12rem;
+      color: var(--color-text);
+      letter-spacing: -0.02em;
+    }
+
+    .feature-card p {
+      margin: 0;
+      color: var(--color-text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* ========== About ========== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: clamp(1.5rem, 3vw, 2.75rem);
+      align-items: center;
+    }
+
+    @media (max-width: 992px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .about-quote {
+      margin: var(--space-md) 0 var(--space-lg);
+      padding: var(--space-md) var(--space-lg);
+      border-left: 4px solid var(--color-primary);
+      background: linear-gradient(90deg, var(--color-primary-soft), transparent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--color-text);
+      line-height: 1.55;
+    }
+
+    .about-quote footer {
+      margin-top: var(--space-sm);
+      font-style: normal;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+    }
+
+    .check-list {
+      list-style: none;
+      margin: var(--space-md) 0 0;
+      padding: 0;
+    }
+
+    .check-list li {
+      position: relative;
+      padding-left: 1.75rem;
+      margin-bottom: 0.65rem;
+      color: var(--color-text-muted);
+      font-size: 0.98rem;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--color-white);
+      background: linear-gradient(145deg, var(--color-primary), var(--color-primary-dark));
+      width: 1.25rem;
+      height: 1.25rem;
+      border-radius: 50%;
+      font-size: 0.65rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0.2rem;
+      line-height: 1;
+    }
+
+    .about-visual {
+      position: relative;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--color-border);
+      min-height: 280px;
+      aspect-ratio: 4 / 3;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      background: var(--color-primary-soft);
+    }
+
+    .about-visual:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .about-visual__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    @supports not (aspect-ratio: 1 / 1) {
+      .about-visual {
+        height: 280px;
+        aspect-ratio: auto;
+      }
+    }
+
+    /* ========== Doctor spotlight ========== */
+    .doctor-panel {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: var(--space-lg);
+      align-items: center;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-md);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .doctor-panel:hover {
+      box-shadow: var(--shadow-lg);
+    }
+
+    @media (max-width: 768px) {
+      .doctor-panel {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .doctor-panel .doctor-card__aside {
+        margin: 0 auto;
+      }
+    }
+
+    .doctor-card__aside {
+      text-align: center;
+    }
+
+    .doctor-photo {
+      width: 220px;
+      height: 280px;
+      max-width: 100%;
+      margin: 0 auto var(--space-md);
+      border-radius: var(--radius-lg);
+      border: 3px solid var(--color-white);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      flex-shrink: 0;
+      background: var(--color-primary-soft);
+    }
+
+    .doctor-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .doctor-creds {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      line-height: 1.5;
+    }
+
+    .doctor-body h3 {
+      margin: 0 0 var(--space-xs);
+      font-size: 1.45rem;
+      letter-spacing: -0.02em;
+    }
+
+    .doctor-tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-primary-dark);
+      margin-bottom: var(--space-md);
+    }
+
+    .doctor-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: var(--space-md);
+    }
+
+    .doctor-highlights span {
+      font-size: 0.82rem;
+      padding: 0.35rem 0.75rem;
+      background: var(--color-mint);
+      border-radius: 999px;
+      color: var(--color-text);
+      border: 1px solid var(--color-border);
+    }
+
+    /* ========== Clinic gallery ========== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+
+    @media (min-width: 576px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 992px) {
+      .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--space-md);
+      }
+    }
+
+    .gallery-item {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+      aspect-ratio: 4 / 3;
+      background: var(--color-primary-soft);
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    @media (hover: none) {
+      .gallery-item:hover img {
+        transform: none;
+      }
+    }
+
+    /* ========== Services ========== */
+    .service-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px) scale(1.01);
+      box-shadow: var(--shadow-card-hover);
+      border-color: rgba(23, 138, 156, 0.22);
+    }
+
+    .service-card__icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(145deg, var(--color-white), var(--color-primary-soft));
+      border: 1px solid rgba(23, 138, 156, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: var(--space-md);
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover .service-card__icon {
+      transform: scale(1.06);
+    }
+
+    .service-card h3 {
+      margin: 0 0 var(--space-xs);
+      font-size: 1.08rem;
+      letter-spacing: -0.02em;
+    }
+
+    .service-card p {
+      flex: 1;
+      margin: 0 0 var(--space-md);
+      color: var(--color-text-muted);
+      font-size: 0.94rem;
+      line-height: 1.6;
+    }
+
+    .learn-more {
+      font-weight: 600;
+      color: var(--color-primary-dark);
+      font-size: 0.88rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .learn-more:hover {
+      text-decoration: none;
+      gap: 0.45rem;
+    }
+
+    /* ========== Process ========== */
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-md);
+      counter-reset: step;
+    }
+
+    @media (max-width: 992px) {
+      .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .process-step {
+      position: relative;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg) var(--space-md);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .process-step:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .process-step__num {
+      width: 44px;
+      height: 44px;
+      margin: 0 auto var(--space-md);
+      border-radius: 50%;
+      background: linear-gradient(145deg, var(--color-primary), var(--color-primary-dark));
+      color: var(--color-white);
+      font-weight: 800;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(15, 107, 122, 0.25);
+    }
+
+    .process-step h3 {
+      margin: 0 0 var(--space-xs);
+      font-size: 1rem;
+    }
+
+    .process-step p {
+      margin: 0;
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      line-height: 1.55;
+    }
+
+    /* ========== CTA Banner ========== */
+    .cta-banner {
+      background: linear-gradient(125deg, var(--color-primary) 0%, #0a5a66 100%);
+      color: var(--color-white);
+      text-align: center;
+      padding: var(--space-xl) var(--space-lg);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-banner::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 50%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .cta-banner h2 {
+      margin: 0 0 var(--space-sm);
+      font-size: clamp(1.55rem, 3.2vw, 2.1rem);
+      position: relative;
+      letter-spacing: -0.02em;
+    }
+
+    .cta-banner p {
+      margin: 0 0 var(--space-md);
+      opacity: 0.95;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      line-height: 1.65;
+    }
+
+    .cta-banner .btn-light:hover {
+      color: var(--color-primary-dark);
+    }
+
+    /* ========== Testimonials ========== */
+    .testimonial-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-sm);
+      height: 100%;
+      position: relative;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-6px) scale(1.01);
+    }
+
+    .testimonial-card__quote {
+      font-size: 2.5rem;
+      line-height: 1;
+      color: var(--color-primary-soft);
+      font-family: Georgia, serif;
+      margin-bottom: var(--space-sm);
+      user-select: none;
+    }
+
+    .stars {
+      color: #e8a317;
+      letter-spacing: 3px;
+      margin-bottom: var(--space-md);
+      font-size: 0.95rem;
+    }
+
+    .testimonial-card .body-text {
+      margin: 0 0 var(--space-md);
+      color: var(--color-text);
+      font-size: 0.98rem;
+      line-height: 1.65;
+    }
+
+    .testimonial-card cite {
+      font-style: normal;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      font-size: 0.92rem;
+    }
+
+    .testimonial-card .role {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--color-text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* ========== FAQ ========== */
+    .faq-list {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      margin-bottom: var(--space-sm);
+      background: var(--color-white);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-item button {
+      width: 100%;
+      text-align: left;
+      padding: var(--space-md) 1.25rem;
+      background: var(--color-white);
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-text);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-md);
+      transition: background 0.2s;
+    }
+
+    .faq-item button:hover {
+      background: var(--color-mint);
+    }
+
+    .faq-item button:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: -2px;
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--color-primary-soft);
+      color: var(--color-primary-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 700;
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .faq-item.is-open .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-panel {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .faq-item.is-open .faq-panel {
+      grid-template-rows: 1fr;
+    }
+
+    .faq-panel-inner-wrap {
+      overflow: hidden;
+      min-height: 0;
+    }
+
+    .faq-panel-inner {
+      padding: 0 1.25rem var(--space-md);
+      color: var(--color-text-muted);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    /* ========== Contact ========== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: var(--space-lg);
+      align-items: stretch;
+    }
+
+    @media (max-width: 992px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contact-stack {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+
+    .contact-info {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-info h3 {
+      margin: 0 0 var(--space-md);
+      font-size: 1.15rem;
+    }
+
+    .contact-info dl {
+      margin: 0;
+    }
+
+    .contact-info dt {
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      margin-top: var(--space-md);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .contact-info dt:first-child {
+      margin-top: 0;
+    }
+
+    .contact-info dd {
+      margin: 0.3rem 0 0;
+      color: var(--color-text-muted);
+      font-size: 0.95rem;
+    }
+
+    .timings-card {
+      background: linear-gradient(145deg, var(--color-primary-soft), var(--color-white));
+      border: 1px solid rgba(23, 138, 156, 0.2);
+      border-radius: var(--radius-lg);
+      padding: var(--space-md) var(--space-lg);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .timings-card h4 {
+      margin: 0 0 var(--space-sm);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-primary-dark);
+    }
+
+    .timings-card p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--color-text);
+      line-height: 1.55;
+    }
+
+    .emergency-note {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      padding: var(--space-md);
+      background: #fff9f0;
+      border: 1px solid #f0e6d8;
+      border-radius: var(--radius);
+      line-height: 1.55;
+    }
+
+    .emergency-note strong {
+      color: var(--color-text);
+    }
+
+    .contact-form-wrap {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-form-wrap h3 {
+      margin: 0 0 var(--space-xs);
+      font-size: 1.2rem;
+    }
+
+    .contact-form-wrap > p.sub {
+      margin: 0 0 var(--space-lg);
+      color: var(--color-text-muted);
+      font-size: 0.92rem;
+    }
+
+    .form-group {
+      margin-bottom: var(--space-md);
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.88rem;
+      margin-bottom: 0.4rem;
+      color: var(--color-text);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      background: #fafcfd;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      background: var(--color-white);
+      box-shadow: 0 0 0 4px rgba(23, 138, 156, 0.12);
+    }
+
+    .form-group textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 0.9rem;
+      font-size: 1rem;
+    }
+
+    /* ========== Map ========== */
+    .map-embed {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-md);
+      aspect-ratio: 16 / 10;
+      min-height: 260px;
+      background: var(--color-mint);
+    }
+
+    .map-embed iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    @supports not (aspect-ratio: 1 / 1) {
+      .map-embed {
+        height: 0;
+        padding-bottom: 62.5%;
+        min-height: 0;
+        aspect-ratio: auto;
+      }
+    }
+
+    /* ========== Footer (brand-aligned teal — matches CTA / primary palette) ========== */
+    .footer {
+      position: relative;
+      background: linear-gradient(165deg, var(--color-primary) 0%, #0c5c68 42%, var(--color-primary-dark) 100%);
+      color: rgba(255, 255, 255, 0.92);
+      padding: 3.125rem 0 1.25rem;
+      box-shadow: 0 -12px 40px rgba(15, 107, 122, 0.08);
+    }
+
+    .footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--color-primary-dark), var(--color-accent), var(--color-primary-soft));
+    }
+
+    .footer a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: none;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-logo {
+      font-size: 1.375rem;
+      font-weight: 800;
+      margin: 0 0 0.65rem;
+      color: var(--color-accent);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .footer-col h3 {
+      margin: 0 0 0.95rem;
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--color-white);
+    }
+
+    .footer-col > p {
+      margin: 0 0 0.5rem;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .footer-col > p a {
+      color: rgba(255, 255, 255, 0.92);
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+
+    .footer-col > p a:hover {
+      color: var(--color-white);
+    }
+
+    .footer-col ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 0.625rem;
+    }
+
+    .footer-col ul li a {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.875rem;
+      transition: color 0.25s ease, padding-left 0.25s ease;
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--color-accent);
+      padding-left: 5px;
+    }
+
+    .socials {
+      margin-top: 0.85rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+
+    .socials a {
+      font-size: 1.125rem;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.85);
+      transition: color 0.25s ease;
+      line-height: 1;
+    }
+
+    .socials a:hover {
+      color: var(--color-accent);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 1.875rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      padding-top: 1rem;
+      font-size: 0.8125rem;
+      color: rgba(255, 255, 255, 0.62);
+    }
+
+    .footer .disclaimer {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.45);
+      margin-top: var(--space-sm);
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.55;
+    }
+
+    @media (max-width: 900px) {
+      .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+      }
+
+      .footer-col ul li a:hover {
+        padding-left: 0;
+      }
+
+      .socials {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+      }
+
+      .footer-col ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    /* ========== Services grid (prevents overflow) ========== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+      gap: var(--space-md);
+    }
+
+    /* ========== Responsive breakpoints ========== */
+    @media (max-width: 1200px) {
+      :root {
+        --space-2xl: 4.5rem;
+        --space-xl: 3.25rem;
+      }
+    }
+
+    @media (max-width: 992px) {
+      :root {
+        --header-h: 72px;
+      }
+
+      .hero__blob--1 {
+        width: 280px;
+        height: 280px;
+        right: -60px;
+      }
+
+      .hero__blob--2 {
+        width: 220px;
+        height: 220px;
+        left: -70px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .site-header {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+
+      .section {
+        padding: 3rem 0;
+      }
+
+      .hero__grid {
+        gap: 1.25rem;
+      }
+
+      .hero-float {
+        animation: none !important;
+      }
+
+      .stats-strip {
+        margin-top: calc(-1 * var(--space-md));
+      }
+
+      .stats-inner {
+        padding: var(--space-md);
+        gap: var(--space-sm);
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        gap: 1.5rem;
+      }
+
+      .contact-grid {
+        gap: 1.25rem;
+      }
+
+      .contact-grid > * {
+        min-width: 0;
+      }
+
+      .cta-banner {
+        padding: var(--space-lg) var(--space-md);
+        margin: 0;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .section-title {
+        font-size: clamp(1.45rem, 6vw, 1.9rem);
+      }
+
+      .section-lead {
+        font-size: 1rem;
+        margin-bottom: var(--space-md);
+      }
+
+      .hero {
+        padding-top: var(--space-lg);
+        padding-bottom: 3rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.65rem, 7vw, 2.2rem);
+      }
+
+      .hero p.lead {
+        font-size: 1rem;
+      }
+
+      .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-cta .btn {
+        width: 100%;
+        min-height: 48px;
+      }
+
+      .trust-badges {
+        justify-content: flex-start;
+      }
+
+      .stats-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.65rem;
+        padding: var(--space-sm);
+      }
+
+      .stat-item {
+        padding: 0.5rem;
+      }
+
+      .stat-item__label {
+        font-size: 0.72rem;
+      }
+
+      .logo {
+        font-size: 1.05rem;
+      }
+
+      .logo span {
+        font-size: 0.7rem;
+      }
+
+      .about-quote {
+        padding: var(--space-sm) var(--space-md);
+        font-size: 0.98rem;
+      }
+
+      .process-steps {
+        gap: var(--space-sm);
+      }
+
+      .form-group input,
+      .form-group textarea {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .stats-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.75rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-float {
+        animation: none !important;
+      }
+
+      .about-visual:hover {
+        transform: none;
+      }
+
+      .gallery-item img {
+        transition: none;
+      }
+
+      .gallery-item:hover img {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="Vitalis Care Clinic home">
+        Vitalis Care<span>Proctology &amp; Family Health</span>
+      </a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="#top">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Clinic</a>
+        <a href="#process">Process</a>
+        <a href="#testimonials">Stories</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn btn-primary">Book Appointment</a>
+      </nav>
+      <button
+        type="button"
+        class="nav-toggle"
+        id="navToggle"
+        aria-expanded="false"
+        aria-controls="navMobile"
+        aria-label="Open menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-mobile" id="navMobile">
+        <a href="#top">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Clinic</a>
+        <a href="#process">Process</a>
+        <a href="#testimonials">Stories</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn btn-primary">Book Appointment</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="top" aria-labelledby="hero-heading">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__blob hero__blob--1"></div>
+        <div class="hero__blob hero__blob--2"></div>
+      </div>
+      <div class="container hero__grid">
+        <div class="hero-col-left">
+          <span class="hero__eyebrow">Trusted clinical care</span>
+          <h1 id="hero-heading">
+            Compassionate Care for Your <span class="hero__accent">Family’s Health</span>
+          </h1>
+          <p class="lead">
+            Vitalis Care Clinic pairs experienced specialists with modern, evidence-led treatment.
+            Clear explanations, dignified care, and plans that respect your routine—every visit.
+          </p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">Book Appointment</a>
+            <a href="tel:+919876543210" class="btn btn-outline">Call Now</a>
+          </div>
+          <div class="trust-badges" role="list">
+            <span class="badge" role="listitem">Experienced Doctors</span>
+            <span class="badge" role="listitem">Patient-Centered Care</span>
+            <span class="badge" role="listitem">Modern Facilities</span>
+          </div>
+        </div>
+        <div class="hero-visual hero-col-right">
+          <span class="hero-float hero-float--1">Trusted Care</span>
+          <span class="hero-float hero-float--2">Experienced Team</span>
+          <span class="hero-float hero-float--3">Modern Facility</span>
+          <div class="hero-card">
+            <div class="hero-card__header">
+              <div class="hero-card__avatar" aria-hidden="true">👨‍⚕️</div>
+              <div class="hero-card__meta">
+                <strong>Consultation snapshot</strong>
+                <span>Replace with lead doctor photo &amp; credentials</span>
+              </div>
+            </div>
+            <ul>
+              <li>Private, unhurried appointments</li>
+              <li>Same-day callbacks when slots allow</li>
+              <li>Hygiene-first procedure support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-strip section" aria-label="Clinic highlights" style="padding-top: 0;" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+      <div class="container">
+        <div class="stats-inner">
+          <div class="stat-item">
+            <div class="stat-item__num">15+</div>
+            <div class="stat-item__label">Years of Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item__num">12k+</div>
+            <div class="stat-item__label">Happy Patients</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item__num">25+</div>
+            <div class="stat-item__label">Qualified Staff</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item__num">100%</div>
+            <div class="stat-item__label">Personalized Care</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose -->
+    <section id="why-us" class="section section--tint" aria-labelledby="why-heading">
+      <div class="container">
+        <hr class="section-divider" data-aos="fade-in" data-aos-duration="600" />
+        <h2 class="section-title" id="why-heading" data-aos="fade-up" data-aos-duration="800">Why Choose Our Clinic</h2>
+        <p class="section-lead" data-aos="fade-up" data-aos-duration="800" data-aos-delay="80">
+          Respect, hygiene, and transparent advice—so you always know the plan before you consent.
+        </p>
+        <div class="card-grid">
+          <article class="feature-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
+            <div class="icon-wrap" aria-hidden="true">👩‍⚕️</div>
+            <h3>Experienced Medical Team</h3>
+            <p>Consultants with focused training in proctology and general surgery, supported by attentive nursing staff.</p>
+          </article>
+          <article class="feature-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+            <div class="icon-wrap" aria-hidden="true">🔬</div>
+            <h3>Advanced Treatment &amp; Care</h3>
+            <p>Modern diagnostics and day-care procedures where clinically appropriate, with recovery guidance included.</p>
+          </article>
+          <article class="feature-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <div class="icon-wrap" aria-hidden="true">🛋️</div>
+            <h3>Clean &amp; Comfortable Facility</h3>
+            <p>Private consultation rooms, sanitized procedure areas, and a calm waiting lounge.</p>
+          </article>
+          <article class="feature-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <div class="icon-wrap" aria-hidden="true">🤝</div>
+            <h3>Personalized Patient Support</h3>
+            <p>Follow-up check-ins, diet and recovery tips, and staff who answer questions without rushing you.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container about-grid">
+        <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="50">
+          <h2 class="section-title" id="about-heading" style="text-align: left;">About the Clinic</h2>
+          <p style="color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.7;">
+            Vitalis Care Clinic began as a specialist practice focused on ano-rectal health and careful follow-up.
+            Today we welcome adults and families who need honest guidance, thorough examination, and practical recovery plans.
+          </p>
+          <blockquote class="about-quote">
+            “Trust starts when a patient feels heard. We protect that time.”
+            <footer>— Clinical care philosophy, Vitalis Care</footer>
+          </blockquote>
+          <ul class="check-list">
+            <li>Qualified professionals with transparent credentials</li>
+            <li>Friendly staff trained in privacy and dignity</li>
+            <li>Modern consultation rooms and sterile procedure support</li>
+            <li>Clear fee communication and documented care summaries</li>
+          </ul>
+        </div>
+        <div class="about-visual" data-aos="fade-up" data-aos-duration="700" data-aos-delay="120">
+          <img
+            class="about-visual__img"
+            src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=80"
+            alt="Modern medical clinic consultation area with comfortable seating"
+            loading="lazy"
+            width="1000"
+            height="750"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Doctor spotlight -->
+    <section id="doctor" class="section section--soft" aria-labelledby="doctor-heading">
+      <div class="container">
+        <h2 class="section-title" id="doctor-heading" data-aos="fade-up" data-aos-duration="800">Lead Consultant</h2>
+        <p class="section-lead" data-aos="fade-up" data-aos-duration="800" data-aos-delay="60">Placeholder profile—swap name, degrees, and photo with your verified details.</p>
+        <div class="doctor-panel" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <div class="doctor-card__aside">
+            <div class="doctor-photo">
+              <img
+                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=80"
+                alt="Portrait of a physician in a white coat with a stethoscope"
+                loading="lazy"
+                width="900"
+                height="1200"
+                decoding="async"
+              />
+            </div>
+            <p class="doctor-creds">MBBS, DNB (General Surgery)<br />Diploma in Proctology (placeholder)</p>
+          </div>
+          <div class="doctor-body">
+            <span class="doctor-tag">Senior Proctology &amp; Minimally Invasive Surgery</span>
+            <h3>Dr. Arjun Mehta</h3>
+            <p style="color: var(--color-text-muted); line-height: 1.7; margin: 0;">
+              With over a decade focused on ano-rectal disorders, Dr. Mehta emphasizes conservative options when safe,
+              and advanced laser or day-care procedures when indicated. Patients receive written aftercare and direct access
+              to the nursing desk during recovery.
+            </p>
+            <div class="doctor-highlights">
+              <span>Laser proctology experience</span>
+              <span>Complex fistula cases</span>
+              <span>Research-led protocols</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section" aria-labelledby="services-heading">
+      <div class="container">
+        <hr class="section-divider" data-aos="fade-in" data-aos-duration="600" />
+        <h2 class="section-title" id="services-heading" data-aos="fade-up" data-aos-duration="800">Our Services</h2>
+        <p class="section-lead" data-aos="fade-up" data-aos-duration="800" data-aos-delay="80">
+          Outpatient-first care with clear referral pathways. Adjust service titles to match your registration scope.
+        </p>
+        <div class="card-grid services-grid">
+          <article class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
+            <div class="service-card__icon" aria-hidden="true">📋</div>
+            <h3>General Consultation</h3>
+            <p>First visits, symptom review, examination planning, and documentation for insurance or employer needs.</p>
+            <span class="learn-more">Learn more →</span>
+          </article>
+          <article class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="80">
+            <div class="service-card__icon" aria-hidden="true">🩺</div>
+            <h3>Preventive Checkups</h3>
+            <p>Routine assessments, lifestyle counselling, and early screening guidance for digestive concerns.</p>
+            <span class="learn-more">Learn more →</span>
+          </article>
+          <article class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="160">
+            <div class="service-card__icon" aria-hidden="true">📈</div>
+            <h3>Chronic Disease Management</h3>
+            <p>Long-term plans for recurring symptoms with scheduled reviews and measurable goals.</p>
+            <span class="learn-more">Learn more →</span>
+          </article>
+          <article class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="240">
+            <div class="service-card__icon" aria-hidden="true">🧒</div>
+            <h3>Pediatric Care</h3>
+            <p>Age-appropriate evaluation for common concerns, with referrals to pediatric specialists when required.</p>
+            <span class="learn-more">Learn more →</span>
+          </article>
+          <article class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="320">
+            <div class="service-card__icon" aria-hidden="true">🌸</div>
+            <h3>Women’s Health</h3>
+            <p>Confidential consultations for pelvic floor symptoms, postpartum recovery, and coordinated referrals.</p>
+            <span class="learn-more">Learn more →</span>
+          </article>
+          <article class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+            <div class="service-card__icon" aria-hidden="true">🔎</div>
+            <h3>Diagnostic Guidance</h3>
+            <p>Help interpreting prior reports, second opinions, and choosing the right next investigation.</p>
+            <span class="learn-more">Learn more →</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clinic gallery -->
+    <section id="gallery" class="section section--soft" aria-labelledby="gallery-heading">
+      <div class="container">
+        <hr class="section-divider" data-aos="fade-in" data-aos-duration="600" />
+        <h2 class="section-title" id="gallery-heading" data-aos="fade-up" data-aos-duration="800">Inside Our Care Space</h2>
+        <p class="section-lead" data-aos="fade-up" data-aos-duration="800" data-aos-delay="60">
+          A glimpse of the calm, clinical spaces where we welcome patients—replace with your own photography when ready.
+        </p>
+        <div class="gallery-grid">
+          <div class="gallery-item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">
+            <img
+              src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1000&q=80"
+              alt="Bright hospital corridor with natural light"
+              loading="lazy"
+              width="1000"
+              height="750"
+              decoding="async"
+            />
+          </div>
+          <div class="gallery-item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="80">
+            <img
+              src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1000&q=80"
+              alt="Medical equipment in a clean treatment room"
+              loading="lazy"
+              width="1000"
+              height="750"
+              decoding="async"
+            />
+          </div>
+          <div class="gallery-item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="160">
+            <img
+              src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1000&q=80"
+              alt="Healthcare professional reviewing patient care"
+              loading="lazy"
+              width="1000"
+              height="750"
+              decoding="async"
+            />
+          </div>
+          <div class="gallery-item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="240">
+            <img
+              src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1000&q=80"
+              alt="Welcoming clinic reception and waiting area"
+              loading="lazy"
+              width="1000"
+              height="750"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="section section--tint" aria-labelledby="process-heading">
+      <div class="container">
+        <h2 class="section-title" id="process-heading" data-aos="fade-up" data-aos-duration="800">Your Appointment Journey</h2>
+        <p class="section-lead" data-aos="fade-up" data-aos-duration="800" data-aos-delay="60">A simple path from first call to follow-up—no guesswork.</p>
+        <div class="process-steps">
+          <div class="process-step" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
+            <div class="process-step__num">1</div>
+            <h3>Book Appointment</h3>
+            <p>Call, WhatsApp, or use the form. We confirm slot and preparation steps.</p>
+          </div>
+          <div class="process-step" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+            <div class="process-step__num">2</div>
+            <h3>Visit Clinic</h3>
+            <p>Check in at reception; minimal paperwork if you pre-registered online.</p>
+          </div>
+          <div class="process-step" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <div class="process-step__num">3</div>
+            <h3>Consultation &amp; Care</h3>
+            <p>Examination, diagnosis discussion, and a written plan you can take home.</p>
+          </div>
+          <div class="process-step" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <div class="process-step__num">4</div>
+            <h3>Follow-up Support</h3>
+            <p>Nursing line for recovery questions and scheduled review visits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="section" aria-labelledby="cta-heading" style="padding-top: var(--space-lg);">
+      <div class="container" data-aos="fade-up" data-aos-duration="700" data-aos-delay="50">
+        <div class="cta-banner">
+          <h2 id="cta-heading">Need a Consultation? Book Your Visit Today</h2>
+          <p>
+            Same-week slots often available. Mention symptoms briefly when you reach out—we will advise documents and fasting if needed.
+          </p>
+          <a href="#contact" class="btn btn-light">Schedule Your Visit</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section section--soft" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <h2 class="section-title" id="testimonials-heading" data-aos="fade-up" data-aos-duration="800">What Our Patients Say</h2>
+        <p class="section-lead" data-aos="fade-up" data-aos-duration="800" data-aos-delay="60">Sample reviews for layout—replace only with consenting, verified testimonials.</p>
+        <div class="card-grid">
+          <article class="testimonial-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
+            <div class="testimonial-card__quote" aria-hidden="true">“</div>
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="body-text">
+              The doctor explained every step before treatment. Staff stayed calm and professional—I knew exactly what recovery would look like.
+            </p>
+            <cite>Anita Deshmukh<span class="role">Pune</span></cite>
+          </article>
+          <article class="testimonial-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="120">
+            <div class="testimonial-card__quote" aria-hidden="true">“</div>
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="body-text">
+              Short waiting time, immaculate rooms, and a follow-up call after my procedure. Felt safe throughout.
+            </p>
+            <cite>Rohan Iyer<span class="role">Mumbai</span></cite>
+          </article>
+          <article class="testimonial-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="240">
+            <div class="testimonial-card__quote" aria-hidden="true">“</div>
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="body-text">
+              I valued the honesty when surgery was not urgent. No pressure—just clear options and timelines.
+            </p>
+            <cite>Meera Krishnan<span class="role">Bengaluru</span></cite>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section" aria-labelledby="faq-heading">
+      <div class="container">
+        <hr class="section-divider" data-aos="fade-in" data-aos-duration="600" />
+        <h2 class="section-title" id="faq-heading" data-aos="fade-up" data-aos-duration="800">Frequently Asked Questions</h2>
+        <p class="section-lead" data-aos="fade-up" data-aos-duration="800" data-aos-delay="60">Quick answers—your care team can elaborate during consultation.</p>
+        <div class="faq-list" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <div class="faq-item">
+            <button type="button" aria-expanded="false" id="faq-btn-1" aria-controls="faq-panel-1">
+              Do I need an appointment?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1">
+              <div class="faq-panel-inner-wrap">
+                <div class="faq-panel-inner">
+                  Yes—scheduled visits reduce waiting time and ensure a consultant is available. Same-day slots may open; call the front desk.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" aria-expanded="false" id="faq-btn-2" aria-controls="faq-panel-2">
+              What are the clinic timings?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2">
+              <div class="faq-panel-inner-wrap">
+                <div class="faq-panel-inner">
+                  Monday to Saturday, 9:00 a.m. to 7:00 p.m. Sunday is for emergencies only—please phone ahead.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" aria-expanded="false" id="faq-btn-3" aria-controls="faq-panel-3">
+              Do you accept walk-ins?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3">
+              <div class="faq-panel-inner-wrap">
+                <div class="faq-panel-inner">
+                  Limited walk-ins may be accommodated if capacity allows. Booking ahead is strongly recommended.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" aria-expanded="false" id="faq-btn-4" aria-controls="faq-panel-4">
+              What services do you provide?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-panel" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4">
+              <div class="faq-panel-inner-wrap">
+                <div class="faq-panel-inner">
+                  General consultation, preventive visits, chronic care, selected specialty procedures, and diagnostic coordination—aligned with our licensed scope.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" aria-expanded="false" id="faq-btn-5" aria-controls="faq-panel-5">
+              How can I contact the clinic?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-panel" id="faq-panel-5" role="region" aria-labelledby="faq-btn-5">
+              <div class="faq-panel-inner-wrap">
+                <div class="faq-panel-inner">
+                  Phone, WhatsApp (during business hours), email, or the appointment form on this page. We respond within one business day.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section--tint" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 class="section-title" id="contact-heading" data-aos="fade-up" data-aos-duration="800">Contact &amp; Appointments</h2>
+        <p class="section-lead" data-aos="fade-up" data-aos-duration="800" data-aos-delay="60">Update every line below to match your registered clinic address and channels.</p>
+        <div class="contact-grid">
+          <div class="contact-stack" data-aos="fade-up" data-aos-duration="650" data-aos-delay="60">
+            <div class="contact-info">
+              <h3>Visit &amp; Reach Us</h3>
+              <dl>
+                <dt>Address</dt>
+                <dd>
+                  Ground Floor, Example Plaza, Near City Hospital Road<br />
+                  Kothrud, Pune, Maharashtra 411038, India
+                </dd>
+                <dt>Phone</dt>
+                <dd><a href="tel:+919876543210">+91 98765 43210</a> (placeholder)</dd>
+                <dt>Email</dt>
+                <dd><a href="mailto:care@vitalisclinic.example">care@vitalisclinic.example</a></dd>
+              </dl>
+            </div>
+            <div class="timings-card">
+              <h4>Clinic Timings</h4>
+              <p>Mon–Sat: 9:00 a.m. – 7:00 p.m.<br />Sunday: Emergency calls only</p>
+            </div>
+            <div class="emergency-note">
+              <strong>Urgent symptoms?</strong> If you have heavy bleeding, high fever, or severe pain, seek emergency care or call your nearest hospital. This line is not for life-threatening emergencies.
+            </div>
+          </div>
+          <div class="contact-form-wrap" data-aos="fade-up" data-aos-duration="650" data-aos-delay="100">
+            <h3>Request a Callback</h3>
+            <p class="sub">We will confirm your slot by phone or email. No payment is taken through this demo form.</p>
+            <form id="contactForm" action="#" method="post">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required placeholder="Your full name" />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" required placeholder="10-digit mobile number" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Preferred date, symptoms, or questions"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary form-submit">Submit Request</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section id="location" class="section" aria-labelledby="map-heading" style="padding-top: 0;">
+      <div class="container">
+        <h2 class="section-title" id="map-heading" data-aos="fade-up" data-aos-duration="800">Location</h2>
+        <p class="section-lead" style="margin-bottom: var(--space-md);" data-aos="fade-up" data-aos-duration="800" data-aos-delay="60">
+          Directions to Healing Hands Piles and Fistula Clinic—tap the map to open in Google Maps.
+        </p>
+        <div
+          class="map-embed"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="100"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.216740224263!2d73.0124337!3d19.010168699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c39ebfd1d525%3A0xb8c056ba9ff3b17a!2sHealing%20Hands%20Piles%20and%20Fistula%20Clinic!5e0!3m2!1sen!2sus!4v1776039950625!5m2!1sen!2sus"
+            title="Google Map — Healing Hands Piles and Fistula Clinic"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <p style="text-align: center; color: var(--color-text-muted); margin-top: var(--space-md); font-size: 0.95rem;">
+          Healing Hands Piles and Fistula Clinic — verify hours and entry instructions with the front desk before your visit.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" data-aos="fade-up" data-aos-duration="800" data-aos-offset="40">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <h2 class="footer-logo">Vitalis Care</h2>
+        <p>Compassionate proctology and family healthcare. Your health, our priority.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#doctor">Doctors</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#services">Piles Treatment</a></li>
+          <li><a href="#services">Fissure Care</a></li>
+          <li><a href="#services">General Consultation</a></li>
+          <li><a href="#services">Family Health</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>📍 Kothrud, Pune, India</p>
+        <p>📞 <a href="tel:+919876543210">+91 98765 43210</a></p>
+        <p>✉️ <a href="mailto:care@vitalisclinic.example">care@vitalisclinic.example</a></p>
+        <div class="socials" aria-label="Social links">
+          <a href="#" aria-label="Website">🌐</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Instagram">📸</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Vitalis Care Clinic Pvt. Ltd. All rights reserved.</p>
+      <p class="disclaimer">
+        Disclaimer: Information on this website is for general awareness only and does not replace professional medical advice.
+        Consult a qualified doctor for diagnosis and treatment decisions.
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    (function () {
+      var toggle = document.getElementById("navToggle");
+      var mobile = document.getElementById("navMobile");
+      if (toggle && mobile) {
+        function setOpen(open) {
+          toggle.setAttribute("aria-expanded", open);
+          toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+          mobile.classList.toggle("is-open", open);
+        }
+        toggle.addEventListener("click", function () {
+          setOpen(toggle.getAttribute("aria-expanded") !== "true");
+        });
+        mobile.querySelectorAll('a[href^="#"]').forEach(function (link) {
+          link.addEventListener("click", function () {
+            setOpen(false);
+          });
+        });
+      }
+
+      var form = document.getElementById("contactForm");
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Thank you. This is a demo form—connect your backend or form service to receive submissions.");
+        });
+      }
+
+      document.querySelectorAll(".faq-item button").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var item = btn.closest(".faq-item");
+          var wasOpen = item.classList.contains("is-open");
+          document.querySelectorAll(".faq-item").forEach(function (i) {
+            i.classList.remove("is-open");
+            var b = i.querySelector("button");
+            if (b) b.setAttribute("aria-expanded", "false");
+          });
+          if (!wasOpen) {
+            item.classList.add("is-open");
+            btn.setAttribute("aria-expanded", "true");
+          }
+          if (typeof AOS !== "undefined") AOS.refresh();
+        });
+      });
+
+      var header = document.getElementById("siteHeader");
+      function onScroll() {
+        if (!header) return;
+        header.classList.toggle("is-scrolled", window.scrollY > 16);
+      }
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+
+      function initMotion() {
+        var reduceMotion =
+          typeof window.matchMedia === "function" &&
+          window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        function aosBoot() {
+          if (typeof AOS === "undefined") return;
+          var mobile = window.innerWidth < 768;
+          AOS.init({
+            duration: mobile ? 520 : 680,
+            easing: "ease-out-cubic",
+            once: true,
+            offset: mobile ? 28 : 50,
+            delay: 0,
+            disable: reduceMotion,
+            anchorPlacement: "top-bottom",
+          });
+          requestAnimationFrame(function () {
+            AOS.refresh();
+          });
+        }
+
+        if (!reduceMotion && typeof gsap !== "undefined" && typeof gsap.matchMedia === "function") {
+          var mm = gsap.matchMedia();
+          mm.add("(min-width: 769px)", function () {
+            gsap.from("#siteHeader", { y: -26, opacity: 0, duration: 0.5, ease: "power2.out" });
+            gsap.from(".hero-col-left .hero__eyebrow", {
+              opacity: 0,
+              y: 16,
+              duration: 0.5,
+              ease: "power2.out",
+              delay: 0.04,
+            });
+            gsap.from("#hero-heading", { opacity: 0, y: 28, duration: 0.7, ease: "power2.out", delay: 0.1 });
+            gsap.from(".hero-col-left .lead", { opacity: 0, y: 18, duration: 0.6, ease: "power2.out", delay: 0.24 });
+            gsap.from(".hero-col-left .hero-cta .btn", {
+              opacity: 0,
+              scale: 0.95,
+              duration: 0.45,
+              stagger: 0.1,
+              ease: "back.out(1.1)",
+              delay: 0.38,
+            });
+            gsap.from(".hero-col-left .trust-badges .badge", {
+              opacity: 0,
+              y: 12,
+              duration: 0.4,
+              stagger: 0.07,
+              ease: "power2.out",
+              delay: 0.55,
+            });
+            gsap.from(".hero-col-right", {
+              opacity: 0,
+              x: 40,
+              duration: 0.75,
+              ease: "power3.out",
+              delay: 0.14,
+            });
+            gsap.from(".hero-float", {
+              opacity: 0,
+              y: 8,
+              scale: 0.97,
+              duration: 0.4,
+              stagger: 0.08,
+              ease: "power2.out",
+              delay: 0.45,
+            });
+          });
+          mm.add("(max-width: 768px)", function () {
+            gsap.from("#siteHeader", { y: -14, opacity: 0, duration: 0.4, ease: "power2.out" });
+            gsap.from(".hero-col-left .hero__eyebrow", {
+              opacity: 0,
+              y: 10,
+              duration: 0.38,
+              ease: "power2.out",
+            });
+            gsap.from("#hero-heading", { opacity: 0, y: 16, duration: 0.5, ease: "power2.out", delay: 0.06 });
+            gsap.from(".hero-col-left .lead", { opacity: 0, y: 12, duration: 0.45, ease: "power2.out", delay: 0.16 });
+            gsap.from(".hero-col-left .hero-cta .btn", {
+              opacity: 0,
+              scale: 0.98,
+              duration: 0.36,
+              stagger: 0.06,
+              ease: "power2.out",
+              delay: 0.26,
+            });
+            gsap.from(".hero-col-left .trust-badges .badge", {
+              opacity: 0,
+              y: 8,
+              duration: 0.32,
+              stagger: 0.05,
+              ease: "power2.out",
+              delay: 0.38,
+            });
+            gsap.from(".hero-col-right", {
+              opacity: 0,
+              y: 14,
+              duration: 0.52,
+              ease: "power2.out",
+              delay: 0.1,
+            });
+            gsap.from(".hero-float", {
+              opacity: 0,
+              y: 6,
+              duration: 0.3,
+              stagger: 0.05,
+              ease: "power2.out",
+              delay: 0.32,
+            });
+          });
+        } else if (!reduceMotion && typeof gsap !== "undefined") {
+          gsap.from("#siteHeader", { y: -16, opacity: 0, duration: 0.45, ease: "power2.out" });
+          gsap.from(".hero-col-left .hero__eyebrow", { opacity: 0, y: 12, duration: 0.42, ease: "power2.out", delay: 0.04 });
+          gsap.from("#hero-heading", { opacity: 0, y: 18, duration: 0.55, ease: "power2.out", delay: 0.1 });
+          gsap.from(".hero-col-left .lead", { opacity: 0, y: 12, duration: 0.45, ease: "power2.out", delay: 0.18 });
+          gsap.from(".hero-col-left .hero-cta .btn", {
+            opacity: 0,
+            scale: 0.97,
+            duration: 0.36,
+            stagger: 0.07,
+            ease: "power2.out",
+            delay: 0.28,
+          });
+          gsap.from(".hero-col-right", { opacity: 0, y: 14, duration: 0.5, ease: "power2.out", delay: 0.12 });
+        }
+
+        aosBoot();
+
+        var resizeTimer;
+        window.addEventListener(
+          "resize",
+          function () {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function () {
+              if (typeof AOS !== "undefined") AOS.refresh();
+            }, 200);
+          },
+          { passive: true }
+        );
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initMotion);
+      } else {
+        initMotion();
+      }
+
+      window.addEventListener("load", function () {
+        if (typeof AOS !== "undefined") AOS.refresh();
+      });
+    })();
+  </script>
+</body>
+</html>
